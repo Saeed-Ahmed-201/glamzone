@@ -17,7 +17,7 @@ export class AppComponent {
   addDocument(collectionName: string, data : any){
     addDoc(this.collectionInstance, data)
     .then(() => console.log('successfully added document'))
-    .catch((err) => console.log(err));
+    .catch((err: any) => console.log(err));
     
   }
   
@@ -34,6 +34,6 @@ export class AppComponent {
   
   async getData(){
     const dataSnap = await getDocs(this.collectionInstance);
-    dataSnap.forEach(result => console.log(result.data()));
+    dataSnap.forEach((result :any) => console.log(result.data()));
   }
 }
