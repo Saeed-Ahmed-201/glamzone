@@ -8,10 +8,14 @@ import { environement } from 'src/environment';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { Firestore, getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { FirebaseService } from './services/firebase.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ComponentsComponent } from './navbar/components/components.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    ComponentsComponent
   ],
   imports: [
     BrowserModule,
