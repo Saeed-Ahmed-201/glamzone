@@ -2,3 +2,13 @@
 <!-- <button (click)="getSingleData()">GET SINGLE DATA</button> -->
 <button (click)="getDataById('I4TzIeo5337dWvdurClq')">GET DATA</button>
 <button (click)="getData()">GET ALL DATA</button>
+<button (click)="getDataByEmail('saeed@gmail.com')">GET DATA BY EMAIL</button>
+
+<ul>
+    <li *ngFor="let item of data ">
+         {{item.data.title | uppercase }}
+         <button (click)="getDataById(item.id)">Details</button>
+   </li>
+</ul>
+
+<p *ngIf="details != ''">{{details}}</p>
